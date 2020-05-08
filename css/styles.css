@@ -1,0 +1,211 @@
+/* variables */
+:root{
+  --green-color: #7acc2d;
+  --white-color: white;
+  /* tipografía */
+  --normal:12px;
+  /* espaciado */
+  --space: 10px;
+  /* box shadow */
+  --box:  0 0 1px #c1bcbc;
+}
+/* variables */
+
+html, body {
+  padding: 0px;
+  margin: 0px;
+  font-size: var(--normal);
+  font-family: 'Open Sans', Helvetica;
+}
+
+nav{
+  display: flex;
+  background-color: var(--green-color);
+  padding: var(--space);
+  color: var(--white-color);
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul{
+  display: flex;
+  margin: 0;
+}
+
+nav li{
+  padding-left: 20px;
+  list-style: none;
+}
+
+nav li a{
+  color: black;
+  text-decoration: none;
+}
+
+nav li a:hover{
+  color: var(--white-color);
+}
+
+
+.main_section{
+  padding: 15%;
+  text-align: center;
+}
+
+
+.products{
+  background-image: url(../images/curve.png);
+  height: 80px;
+  background-size: cover;
+  background-position: center top;
+  padding: 10% 20%;
+  display: flex;
+  justify-content: center;
+}
+
+.product {
+  margin-top: -240px;
+  padding: var(--space);
+}
+
+.product .content:hover{
+  box-shadow: 1px 5px 5px #c4c4c4
+}
+
+.product .content{
+  background-color: white;
+  padding: var(--space);
+  box-shadow: var(--box);
+}
+
+.img_container{
+  text-align: center;
+}
+
+.main_button{
+  background-color: var(--green-color);
+  width: 100%;
+  padding: var(--space);
+  font-size: var(--normal);
+  color: var(--white-color);
+  border: 0;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.main_button:hover{
+  background-color: #5e9e22;
+  box-shadow: 0 0 5px grey;
+}
+
+
+.feature_section {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 10% 5% 5%;
+}
+
+.feature .content{
+  justify-content: space-between;
+  padding: 0 25%;
+}
+
+.feat_img_container img{
+  height: 100px;
+  width: auto;
+}
+
+
+.testimonial_section{
+  padding: 5% 5%;
+  border-top: 1px solid #eaeaea;
+}
+
+.testimonial_section h1{
+  margin-top: 0;
+  text-align: center;
+}
+
+.testimonials_container{
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.testimonial{
+  margin: 0 5px;
+  box-shadow: 1px 5px 5px #c4c4c4;
+}
+
+.testimonial .content{
+  padding: var(--space);
+}
+
+.testimonial .content h3{
+  margin: 0;
+}
+
+.testimonial_avatar img {
+  width: 100%;
+  height: auto;
+}
+
+
+.footer_nav {
+  background-color: black;
+}
+
+.contact a{
+  color: var(--green-color);
+}
+
+
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+  display: inherit;
+  flex: 1;
+  justify-content: inherit;
+  align-items: inherit;
+}
+
+@media screen and (max-width:768px){
+  .main_section{
+    margin-bottom: 15%;
+  }
+  
+  .product{
+    margin-top: -300px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .main_section {
+    padding: 5%;
+  }
+  
+  .products{
+    display: inherit;
+    height: auto;
+    padding: 10% 10%;
+  }
+
+  .product{
+    margin-top: auto;
+  }
+
+  .feature_section{
+    display: inherit;
+  }
+
+  .testimonials_container{
+    flex-wrap: wrap;
+    padding: 0 15% 0;
+  }
+
+  .testimonial{
+    margin: 10px 0;
+  }
+}
